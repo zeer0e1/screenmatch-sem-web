@@ -27,6 +27,7 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		// Consultando  a série
 		var endereco = "https://www.omdbapi.com/?t=gilmore+girls&apikey=ede20d0a";
 		var json  = consumoAPI.obterDados(endereco);
+
 		DadosSerie dados = conversor.obterDados(json,DadosSerie.class);
 		System.out.println(dados);
 
@@ -48,7 +49,6 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		}
 
 		temporadas.forEach(System.out::println);
-
 
 
 	}
